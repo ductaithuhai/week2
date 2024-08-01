@@ -88,15 +88,54 @@ function leapYear(a) {
 }
 console.log(leapYear(2024));
 
-// //------BT10-------
-// function readNumberInteger(a) {
-//     switch(a*10){
-//         case 0:
-//             return "Không";
-//             break;
-//     }
-// }
-// console.log(readNumberInteger(0));
+//------BT10-------
+function readNumberInteger(a) {
+    if(a>=0&&a<=9){
+        let testCase= Math.floor(a);
+        switch(testCase){
+            case 0:
+                return "Không";
+                break;
+            case 1:
+                return "Một";
+                break;
+            case 2:
+                return "Hai";
+                break;
+            case 3:
+                return "Ba";
+                break;
+            case 4:
+                return "Bốn";
+                break;
+            case 5:
+                return "Năm";
+                break;
+            case 6:
+                return "Sáu";
+                break;    
+            case 7:
+                return "Bảy";
+                break;
+            case 8:
+                return "Tám";
+                break;
+            case 9:
+                return "Chín";
+                break;
+        }
+    }else{
+        return "Không thể đọc được";
+    }
+}
+console.log(readNumberInteger(10));
+
+//------BT16-------
+function reverseTextType(char) {
+    cons
+    if()
+}
+console.log(nextSecond(23,25,59));
 
 //------BT16-------
 function nextSecond(h,m,s) {
@@ -170,7 +209,7 @@ console.log(dayInterval(2,12,1994,3,4,2000));
 //------BT32-Nhom 2-------
 function dayCount(d,m,y) {
     const date= new Date(y+"-"+m+"-"+d);
-    const firstDay= new Date(y+"-"+0+"-"+1);
+    const firstDay= new Date(y+"-"+1+"-"+1);
     let dayCount=date.getTime()-firstDay.getTime()
     return dayCount/86400000+1;
 }
@@ -182,9 +221,6 @@ function dayRemain(d,m,y) {
     let nextYear=y+1;
     const nextYearFirstDay= new Date(nextYear+"-"+1+"-"+1);
     let dayRemain=nextYearFirstDay.getTime()-date3.getTime();
-    console.log(date3);
-    console.log(nextYearFirstDay);
-    console.log(dayRemain);
     return dayRemain/86400000;
 }
 console.log(dayRemain(30,12,95));
